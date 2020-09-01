@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  include ArticlesHelper
   def index
     @articles = Article.all
   end
@@ -12,5 +13,13 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    @article = Article.new(article_params)
+    @article.save
+    redirect_to article_path(@article)
+  end
+
+  def destroy
+    Article.destroy(params[:id])
+    redirect_to articles_path
   end
 end
