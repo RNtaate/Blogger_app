@@ -1,7 +1,8 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p><br>
-<h3>Comments</h3>
+<h5>Comments (<%= @article.comments.size %>)</h5>
 <%= render partial: 'articles/comment', collection: @article.comments %>
+<%= render partial: 'comments/form' %>
 
 <p><%= link_to "<< Back to Articles List", articles_path %></p><br>
 <%= link_to 'Edit Article',  edit_article_path(@article)%><br>
