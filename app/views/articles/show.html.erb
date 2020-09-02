@@ -6,10 +6,11 @@
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
 </p>
-
-
+<br>
+<p><%= image_tag @article.image.url %></p>
+<br>
 <p><%= @article.body %></p><br>
-<h5>Comments (<%= @article.comments.size %>)</h5>
+<h5>Comments (<%= @article.comments.size %>)</h5><br>
 <%= render partial: 'articles/comment', collection: @article.comments %>
 <%= render partial: 'comments/form' %>
 
