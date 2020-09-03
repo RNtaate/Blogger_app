@@ -32,7 +32,7 @@ It follows the tutorial found at the [odin project](https://www.theodinproject.c
 
 
 ## LIVE DEMO
-- coming soon!
+- [Blogger](https://cryptic-basin-79615.herokuapp.com/)
 
 ## Contributions
 
